@@ -1,0 +1,27 @@
+{
+    "name": "shopware6/webnetz-surcharge",
+    "description": "Plugin to add a surcharge to price",
+    "type": "shopware-platform-plugin",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "zrm"
+        }
+    ],
+    "require": {
+        "shopware/core": "6.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "WebnetzSurcharge\\": "src/"
+        }
+    },
+
+    "extra": {
+        "shopware-plugin-class": "WebnetzSurcharge\\WebnetzSurcharge",
+        "label": {
+            "de-DE": "Webnetz Plugin für Aufpreis",
+            "en-GB": "Webnetz Plugin for surcharge"
+        }
+    }
+}

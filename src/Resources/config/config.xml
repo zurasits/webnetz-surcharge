@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/trunk/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title>Kategorien für Aufpreis</title>
+        <title lang="de-DE">Kategorien für Aufpreis</title>
+
+        <input-field type="single-select">
+            <name>category</name>
+            <options>
+                <option>
+                    <id>freeShipping</id>
+                    <name>Kostenloser Versand</name>
+                    <name lang="de-DE">freeShipping</name>
+                </option>
+                <option>
+                    <id>deliveryTime</id>
+                    <name>Lieferzeit sofort</name>
+                    <name lang="de-DE">deliveryTime</name>
+                </option>
+            </options>
+            <label>Aufpreis Kategorie</label>
+            <label lang="de-DE">Aufpreis Kategorie</label>
+        </input-field>
+
+        <input-field type="single-select">
+            <name>surchargeType</name>
+            <options>
+                <option>
+                    <id>absolut</id>
+                    <name>absolut</name>
+                    <name lang="de-DE">absolut</name>
+                </option>
+                <option>
+                    <id>percent</id>
+                    <name>prozentual</name>
+                    <name lang="de-DE">prozentual</name>
+                </option>
+            </options>
+            <label>Aufpreis Art</label>
+            <label lang="de-DE">Aufpreis Art</label>
+        </input-field>
+
+        <input-field type="float">
+            <name>surchargeAmount</name>
+            <label>Aufpreis Höhe</label>
+        </input-field>
+    </card>
+
+
+</config>

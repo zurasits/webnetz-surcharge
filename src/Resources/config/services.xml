@@ -5,12 +5,18 @@
 
     <!-- Definition eines Service -->
     <services>
-        <service id="WebnetzSurcharge\Service\PluginService" class="WebnetzSurcharge\Service\PluginService">
-            
-            <tag name="webnetz_service_tag" />
+        <defaults autowire="false" autoconfigure="false"/>
+
+        <service id="WebnetzSurcharge\Subscriber\SurchargeSubscriber">
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
+            <argument type="service" id="WebnetzSurcharge\Service\DeliveryService"/>
+            <tag name="kernel.event_subscriber"/>
+        </service>
+
+        <service id="WebnetzSurcharge\Service\DeliveryService">
+            <argument type="service" id="delivery_time.repository"/>
         </service>
 
     </services>
-
 
 </container>
